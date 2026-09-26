@@ -5,6 +5,9 @@
 # Images & Graphics
 # ---------------------------------------------------------------------------
 *.png                filter=lfs diff=lfs merge=lfs -text
+# The site logo must be included directly in Vercel deployments. Do not store
+# this small, essential build asset as a Git LFS pointer.
+src/assets/crooz-1063-fm-logo.png -filter -diff -merge -text
 *.jpg                filter=lfs diff=lfs merge=lfs -text
 *.jpeg               filter=lfs diff=lfs merge=lfs -text
 *.gif                filter=lfs diff=lfs merge=lfs -text
