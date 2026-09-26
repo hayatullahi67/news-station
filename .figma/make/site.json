@@ -1,0 +1,10 @@
+{
+  "description": "Explore the latest news with a modern, responsive interface while administrators can efficiently manage articles through a user-friendly dashboard.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

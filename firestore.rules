@@ -1,0 +1,13 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function signedIn() { return request.auth != null; }
+    match /articles/{id} {
+      allow read: if resource.data.status == 'published' || signedIn();
+      allow create, update, delete: if signedIn();
+    }
+    match /authors/{id} { allow read: if true; allow create, update, delete: if signedIn(); }
+    match /settings/{id} { allow read: if true; allow create, update, delete: if signedIn(); }
+    match /subscribers/{id} { allow create: if true; allow read, update, delete: if signedIn(); }
+  }
+}
