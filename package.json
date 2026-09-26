@@ -1,8 +1,9 @@
 {
-  "name": "figma-make-app",
+  "name": "crooz-1063-fm",
   "private": true,
   "version": "1.0.0",
   "type": "module",
+  "packageManager": "pnpm@10.10.0",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -10,7 +11,6 @@
     "format": "oxfmt"
   },
   "dependencies": {
-    "firebase": "^12.7.0",
     "firebase": "^12.7.0",
     "hls.js": "^1.7.3",
     "lucide-react": "^1.48.0",
