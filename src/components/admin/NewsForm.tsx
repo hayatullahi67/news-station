@@ -63,6 +63,15 @@ export default function NewsForm({ initialData, onSaveDraft, onPublish }: NewsFo
 
   useEffect(() => { if (initialData) setForm({ ...defaultData, ...initialData }); }, [initialData]);
 
+  // A contentEditable element must not be re-rendered on every keystroke: doing
+  // so moves the caret and can make Backspace behave unpredictably. Only load
+  // supplied article content when the editor is opened for editing.
+  useEffect(() => {
+    if (editorRef.current && editorRef.current.innerHTML !== (initialData?.content || '')) {
+      editorRef.current.innerHTML = initialData?.content || '';
+    }
+  }, [initialData?.content]);
+
   useEffect(() => { if (!form.category && savedCategories[0]) update('category', savedCategories[0].name as Category); }, [savedCategories, form.category]);
 
   useEffect(() => { authorService.getAll().then(setSavedAuthors).catch(console.error); }, []);
@@ -206,7 +215,7 @@ export default function NewsForm({ initialData, onSaveDraft, onPublish }: NewsFo
               <div className="w-px h-5 bg-gray-300 mx-1" />
               <span className="basis-full sm:basis-auto text-xs text-gray-400">{uploadingInlineImage ? 'Uploading image...' : 'Format text or insert an image'}</span>
             </div>
-            <div ref={editorRef} contentEditable suppressContentEditableWarning onPaste={handleEditorPaste} onInput={(e) => update('content', e.currentTarget.innerHTML)} data-placeholder="Write your full article content here..." className="article-editor min-h-80 px-4 py-4 text-sm text-gray-700 outline-none leading-relaxed empty:before:content-[attr(data-placeholder)] empty:before:text-gray-400 [&_img]:max-w-full [&_img]:my-4" dangerouslySetInnerHTML={{ __html: form.content }} />
+            <div ref={editorRef} contentEditable suppressContentEditableWarning onPaste={handleEditorPaste} onInput={(e) => update('content', e.currentTarget.innerHTML)} data-placeholder="Write your full article content here..." className="article-editor min-h-80 px-4 py-4 text-sm text-gray-700 outline-none leading-relaxed empty:before:content-[attr(data-placeholder)] empty:before:text-gray-400 [&_img]:max-w-full [&_img]:my-4" />
           </div>
         </div>
 

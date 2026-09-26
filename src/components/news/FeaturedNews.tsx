@@ -105,7 +105,7 @@ export default function FeaturedNews({ featured, secondary }: FeaturedNewsProps)
           ))}
 
           <Link
-            to="/"
+            to="/?all=true#latest-news"
             className="flex items-center justify-center gap-2 py-3 border border-[#171717] text-[#171717] hover:bg-[#171717] hover:text-white transition-colors text-xs font-bold uppercase tracking-widest mt-auto"
           >
             More Top Stories <ChevronRight size={14} />

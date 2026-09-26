@@ -21,6 +21,7 @@ export default function Home() {
 
   const searchQuery = searchParams.get('search') || '';
   const categoryParam = searchParams.get('category');
+  const showAllStories = searchParams.get('all') === 'true';
 
   useEffect(() => {
     if (categoryParam) {
@@ -42,8 +43,8 @@ export default function Home() {
   });
 
   useEffect(() => {
-    setVisibleCount(6);
-  }, [activeCategory, searchQuery]);
+    setVisibleCount(showAllStories ? Number.MAX_SAFE_INTEGER : 6);
+  }, [activeCategory, searchQuery, showAllStories]);
 
   // Handle hash scrolling when navigated from another page or direct link
   useEffect(() => {

@@ -125,13 +125,7 @@ export default function Navbar() {
               </button>
             )}
 
-            <Link
-              to="/admin"
-              className="hidden md:block text-xs font-bold uppercase tracking-widest text-white bg-[#171717] hover:bg-[#C8102E] px-3 py-2 transition-colors"
-            >
-              Admin
-            </Link>
-
+           
             <button
               className="md:hidden p-1 text-[#171717]"
               aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
