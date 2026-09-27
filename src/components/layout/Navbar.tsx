@@ -4,9 +4,9 @@ import { Search, Menu, X } from 'lucide-react';
 import croozLogo from '../../assets/crooz-1063-fm-logo.png';
 
 const NAV_ITEMS = [
-  { label: 'Home', targetId: 'home', to: '/' },
-  { label: 'Latest News', targetId: 'latest-news', to: '/#latest-news' },
-  { label: 'Categories', targetId: 'categories', to: '/#categories' },
+  { label: 'News', to: '/news' },
+  { label: 'Latest News', to: '/news#latest-news' },
+  { label: 'Categories', to: '/news#categories' },
 ];
 
 export default function Navbar() {
@@ -15,37 +15,6 @@ export default function Navbar() {
   const [searchQuery, setSearchQuery] = useState('');
   const navigate = useNavigate();
   const location = useLocation();
-
-  const handleNavClick = (
-    e: React.MouseEvent<HTMLAnchorElement>,
-    item: { label: string; targetId: string; to: string }
-  ) => {
-    setMobileOpen(false);
-
-    // If currently on home page without search active
-    if (location.pathname === '/' && !location.search) {
-      e.preventDefault();
-      if (item.targetId === 'home') {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-        window.history.pushState(null, '', '/');
-      } else {
-        const element = document.getElementById(item.targetId);
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
-          window.history.pushState(null, '', `/#${item.targetId}`);
-        }
-      }
-    } else {
-      // Navigating from another page or from search mode
-      e.preventDefault();
-      if (item.targetId === 'home') {
-        navigate('/');
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      } else {
-        navigate(`/#${item.targetId}`);
-      }
-    }
-  };
 
   const handleLogoClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     setMobileOpen(false);
@@ -59,7 +28,7 @@ export default function Navbar() {
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     if (searchQuery.trim()) {
-      navigate(`/?search=${encodeURIComponent(searchQuery.trim())}`);
+      navigate(`/news?search=${encodeURIComponent(searchQuery.trim())}`);
       setSearchOpen(false);
       setSearchQuery('');
     }
@@ -80,18 +49,17 @@ export default function Navbar() {
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-8">
-            <Link to="/live" className="text-sm font-bold text-[#F26926] hover:text-[#171717] transition-colors uppercase tracking-wide">
+            <Link to="/" className="text-sm font-bold text-[#F26926] hover:text-[#171717] transition-colors uppercase tracking-wide">
               Listen Live
             </Link>
             {NAV_ITEMS.map((item) => (
-              <a
+              <Link
                 key={item.label}
-                href={item.to}
-                onClick={(e) => handleNavClick(e, item)}
+                to={item.to}
                 className="text-sm font-semibold text-[#171717] hover:text-[#F26926] transition-colors uppercase tracking-wide cursor-pointer"
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
           </nav>
 
@@ -140,18 +108,18 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {mobileOpen && (
         <div className="md:hidden border-t border-gray-200 bg-white px-4 py-4 space-y-3">
-          <Link to="/live" onClick={() => setMobileOpen(false)} className="block text-sm font-bold text-[#F26926] uppercase tracking-wide py-1">
+          <Link to="/" onClick={() => setMobileOpen(false)} className="block text-sm font-bold text-[#F26926] uppercase tracking-wide py-1">
             Listen Live
           </Link>
           {NAV_ITEMS.map((item) => (
-            <a
+            <Link
               key={item.label}
-              href={item.to}
-              onClick={(e) => handleNavClick(e, item)}
+              to={item.to}
+              onClick={() => setMobileOpen(false)}
               className="block text-sm font-semibold text-[#171717] hover:text-[#F26926] uppercase tracking-wide py-1 cursor-pointer"
             >
               {item.label}
-            </a>
+            </Link>
           ))}
           <Link
             to="/admin"

@@ -12,7 +12,7 @@ interface StreamInfo {
 function detectStream(url: string): StreamInfo {
   const normalized = url.trim();
   const youtube = normalized.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|live\/|embed\/))([\w-]{11})/i);
-  if (youtube) return { type: 'embed', embedUrl: `https://www.youtube-nocookie.com/embed/${youtube[1]}?autoplay=0&rel=0` };
+  if (youtube) return { type: 'embed', embedUrl: `https://www.youtube-nocookie.com/embed/${youtube[1]}?autoplay=1&rel=0` };
   if (/\.(m3u8)(?:[?#].*)?$/i.test(normalized)) return { type: 'hls' };
   if (/streamguys/i.test(normalized)) return { type: 'audio' };
   if (/\.(mp3|aac|m4a|ogg|oga|opus|wav)(?:[?#].*)?$/i.test(normalized)) return { type: 'audio' };
@@ -70,7 +70,7 @@ export default function LiveStreamPlayer({ streamUrl }: { streamUrl: string }) {
   const mediaProps = {
     ref: mediaRef as React.RefObject<HTMLVideoElement & HTMLAudioElement>,
     controls: true,
-    autoPlay: false,
+    autoPlay: true,
     playsInline: true,
     onLoadedMetadata: (event: React.SyntheticEvent<HTMLVideoElement | HTMLAudioElement>) => {
       const media = event.currentTarget;

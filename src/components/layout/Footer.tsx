@@ -12,25 +12,25 @@ export default function Footer() {
     e: React.MouseEvent<HTMLAnchorElement>,
     targetId: string
   ) => {
-    if (location.pathname === '/' && !location.search) {
+    if (location.pathname === '/news' && !location.search) {
       e.preventDefault();
       if (targetId === 'home') {
         window.scrollTo({ top: 0, behavior: 'smooth' });
-        window.history.pushState(null, '', '/');
+        window.history.pushState(null, '', '/news');
       } else {
         const element = document.getElementById(targetId);
         if (element) {
           element.scrollIntoView({ behavior: 'smooth' });
-          window.history.pushState(null, '', `/#${targetId}`);
+          window.history.pushState(null, '', `/news#${targetId}`);
         }
       }
     } else {
       e.preventDefault();
       if (targetId === 'home') {
-        navigate('/');
+        navigate('/news');
         window.scrollTo({ top: 0, behavior: 'smooth' });
       } else {
-        navigate(`/#${targetId}`);
+        navigate(`/news#${targetId}`);
       }
     }
   };
@@ -40,7 +40,7 @@ export default function Footer() {
     category: string
   ) => {
     e.preventDefault();
-    navigate(`/?category=${encodeURIComponent(category)}#categories`);
+    navigate(`/news?category=${encodeURIComponent(category)}#categories`);
     const element = document.getElementById('categories');
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
@@ -66,14 +66,14 @@ export default function Footer() {
             <h4 className="font-bold uppercase tracking-widest text-xs text-[#F26926] mb-4">Quick Links</h4>
             <ul className="space-y-2">
               {[
-                { label: 'Home', targetId: 'home', to: '/' },
-                { label: 'Listen Live', targetId: '', to: '/live' },
-                { label: 'Latest News', targetId: 'latest-news', to: '/#latest-news' },
-                { label: 'Categories', targetId: 'categories', to: '/#categories' },
-                { label: 'Contact', targetId: 'contact', to: '/#contact' },
+                { label: 'Listen Live', targetId: '', to: '/' },
+                { label: 'News', targetId: 'home', to: '/news' },
+                { label: 'Latest News', targetId: 'latest-news', to: '/news#latest-news' },
+                { label: 'Categories', targetId: 'categories', to: '/news#categories' },
+                { label: 'Contact', targetId: 'contact', to: '/news#contact' },
               ].map((link) => (
                 <li key={link.label}>
-                  {link.to === '/live' ? <Link to="/live" className="text-gray-400 hover:text-white text-sm transition-colors">{link.label}</Link> : <a href={link.to} onClick={(e) => handleNavClick(e, link.targetId)} className="text-gray-400 hover:text-white text-sm transition-colors cursor-pointer">{link.label}</a>}
+                  {link.to === '/' ? <Link to="/" className="text-gray-400 hover:text-white text-sm transition-colors">{link.label}</Link> : <a href={link.to} onClick={(e) => handleNavClick(e, link.targetId)} className="text-gray-400 hover:text-white text-sm transition-colors cursor-pointer">{link.label}</a>}
                 </li>
               ))}
             </ul>
@@ -86,7 +86,7 @@ export default function Footer() {
               {categories.map(({ id, name: cat }) => (
                 <li key={id}>
                   <a
-                    href={`/?category=${cat}#categories`}
+                    href={`/news?category=${cat}#categories`}
                     onClick={(e) => handleCategoryClick(e, cat)}
                     className="text-gray-400 hover:text-white text-sm transition-colors cursor-pointer"
                   >

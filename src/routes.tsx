@@ -41,7 +41,8 @@ export const router = createBrowserRouter([
     path: '/',
     Component: PublicLayout,
     children: [
-      { index: true, Component: Home },
+      { index: true, Component: LiveStream },
+      { path: 'news', Component: Home },
       { path: 'news/:id', Component: NewsDetails },
       { path: 'live', Component: LiveStream },
     ],
