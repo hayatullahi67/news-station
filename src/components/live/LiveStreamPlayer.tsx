@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import Hls from 'hls.js';
 import { AlertCircle, Headphones, Pause, Play, Radio, Video } from 'lucide-react';
-const bgImage = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrsBEs2kfFUbTBU4o7cl-H18caWbScRq5Qx1xT2G2EAg&s=10';
+const bgImage = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgoUeLgsR91e_45RKBlDJEY1abVDnucX-8gu1Euru7wA&s=10';
 
 
 type StreamType = 'audio' | 'video' | 'hls' | 'embed' | 'unknown';
@@ -32,6 +32,8 @@ function PlayerBg({ children }: { children: React.ReactNode }) {
         aria-hidden="true"
         className="absolute inset-0 w-full h-full object-cover object-center"
       />
+      {/* dark overlay */}
+      <div className="absolute inset-0 bg-black/50" />
       {/* content */}
       <div className="relative z-10 w-full max-w-xl text-center text-white">
         {children}
