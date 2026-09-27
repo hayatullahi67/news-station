@@ -1,7 +1,8 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import Hls from 'hls.js';
 import { AlertCircle, Headphones, Pause, Play, Radio, Video } from 'lucide-react';
-import bgImage from '../../assets/images.jpg';
+const bgImage = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrsBEs2kfFUbTBU4o7cl-H18caWbScRq5Qx1xT2G2EAg&s=10';
+
 
 type StreamType = 'audio' | 'video' | 'hls' | 'embed' | 'unknown';
 
@@ -25,15 +26,12 @@ function detectStream(url: string): StreamInfo {
 function PlayerBg({ children }: { children: React.ReactNode }) {
   return (
     <div className="relative min-h-72 flex items-center justify-center p-8 overflow-hidden">
-      {/* background image via <img> — guaranteed to work after Vite hashes it */}
       <img
         src={bgImage}
         alt=""
         aria-hidden="true"
         className="absolute inset-0 w-full h-full object-cover object-center"
       />
-      {/* subtle dark overlay */}
-      <div className="absolute inset-0 bg-black/40" />
       {/* content */}
       <div className="relative z-10 w-full max-w-xl text-center text-white">
         {children}
