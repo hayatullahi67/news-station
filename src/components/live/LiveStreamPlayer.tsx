@@ -1,7 +1,8 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import Hls from 'hls.js';
 import { AlertCircle, Headphones, Pause, Play, Radio, Video } from 'lucide-react';
-import bgImage from '@/assets/images.jpg';
+
+const bgImage = '/images.jpg';
 
 type StreamType = 'audio' | 'video' | 'hls' | 'embed' | 'unknown';
 
