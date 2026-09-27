@@ -19,7 +19,7 @@ export default function FeaturedNews({ featured, secondary }: FeaturedNewsProps)
   return (
     <section className="max-w-7xl mx-auto px-4 py-8">
       <div className="flex items-center gap-3 mb-6">
-        <div className="w-1 h-6 bg-[#C8102E]" />
+        <div className="w-1 h-6 bg-[#F26926]" />
         <h2 className="font-display font-black text-2xl text-[#171717] uppercase tracking-wide">
           Top Stories
         </h2>
@@ -36,13 +36,13 @@ export default function FeaturedNews({ featured, secondary }: FeaturedNewsProps)
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
               {featured.isBreaking && (
-                <div className="absolute top-4 left-4 bg-[#C8102E] text-white text-xs font-black uppercase tracking-widest px-3 py-1">
+                <div className="absolute top-4 left-4 bg-[#F26926] text-white text-xs font-black uppercase tracking-widest px-3 py-1">
                   Breaking
                 </div>
               )}
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6">
-                <span className="inline-block bg-[#C8102E] text-white text-[10px] font-black uppercase tracking-widest px-2 py-1 mb-3">
+                <span className="inline-block bg-[#F26926] text-white text-[10px] font-black uppercase tracking-widest px-2 py-1 mb-3">
                   {featured.category}
                 </span>
                 <h2 className="font-display font-black text-white text-xl sm:text-2xl leading-tight mb-2 sm:mb-3 group-hover:text-red-200 transition-colors line-clamp-2">
@@ -89,10 +89,10 @@ export default function FeaturedNews({ featured, secondary }: FeaturedNewsProps)
                 />
               </div>
               <div className="flex-1 min-w-0">
-                <span className="text-[10px] font-black uppercase tracking-widest text-[#C8102E]">
+                <span className="text-[10px] font-black uppercase tracking-widest text-[#F26926]">
                   {article.category}
                 </span>
-                <h3 className="font-display font-bold text-[#171717] text-sm leading-snug mt-1 group-hover:text-[#C8102E] transition-colors line-clamp-3">
+                <h3 className="font-display font-bold text-[#171717] text-sm leading-snug mt-1 group-hover:text-[#F26926] transition-colors line-clamp-3">
                   {article.title}
                 </h3>
                 <div className="flex items-center gap-2 mt-2 text-xs text-gray-400">

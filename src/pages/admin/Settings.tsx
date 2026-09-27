@@ -39,7 +39,7 @@ export default function Settings() {
         </div>
         <button
           type="submit"
-          className="flex w-full justify-center sm:w-auto items-center gap-2 bg-[#C8102E] text-white text-xs font-bold uppercase tracking-widest px-5 py-2.5 hover:bg-[#A00D24] transition-colors"
+          className="flex w-full justify-center sm:w-auto items-center gap-2 bg-[#F26926] text-white text-xs font-bold uppercase tracking-widest px-5 py-2.5 hover:bg-[#D4561A] transition-colors"
         >
           {saved ? <><Check size={14} /> Saved!</> : <><Save size={14} /> Save Changes</>}
         </button>
@@ -50,13 +50,13 @@ export default function Settings() {
           <h2 className="font-black text-xs uppercase tracking-widest text-[#171717]">Live Stream</h2>
           <p className="text-sm text-gray-500 mt-1">Paste the direct stream, HLS (.m3u8), YouTube Live, or media URL. The player detects audio or video automatically.</p>
         </div>
-        <input type="url" value={liveStreamUrl} onChange={(e) => setLiveStreamUrl(e.target.value)} placeholder="https://example.com/live.m3u8" className="w-full border border-gray-200 focus:border-[#C8102E] outline-none px-4 py-2.5 text-sm transition-colors" />
+        <input type="url" value={liveStreamUrl} onChange={(e) => setLiveStreamUrl(e.target.value)} placeholder="https://example.com/live.m3u8" className="w-full border border-gray-200 focus:border-[#F26926] outline-none px-4 py-2.5 text-sm transition-colors" />
       </div>
 
       {/* Station Identity */}
       <div className="bg-white border border-gray-200 p-4 sm:p-6 space-y-4">
         <div className="flex items-center gap-2 mb-2">
-          <Radio size={16} className="text-[#C8102E]" />
+          <Radio size={16} className="text-[#F26926]" />
           <h2 className="font-black text-xs uppercase tracking-widest text-[#171717]">Station Identity</h2>
         </div>
 
@@ -67,7 +67,7 @@ export default function Settings() {
           <div>
             <p className="text-sm font-bold text-[#171717]">Station Logo</p>
             <p className="text-xs text-gray-500 mt-0.5">Recommended: 256×256px PNG or SVG</p>
-            <button type="button" className="mt-2 text-xs font-bold text-[#C8102E] hover:underline">
+            <button type="button" className="mt-2 text-xs font-bold text-[#F26926] hover:underline">
               Upload New Logo
             </button>
           </div>
@@ -80,7 +80,7 @@ export default function Settings() {
               type="text"
               value={settings.stationName}
               onChange={(e) => update('stationName', e.target.value)}
-              className="w-full border border-gray-200 focus:border-[#C8102E] outline-none px-4 py-2.5 text-sm transition-colors"
+              className="w-full border border-gray-200 focus:border-[#F26926] outline-none px-4 py-2.5 text-sm transition-colors"
             />
           </div>
           <div>
@@ -89,7 +89,7 @@ export default function Settings() {
               type="email"
               value={settings.contactEmail}
               onChange={(e) => update('contactEmail', e.target.value)}
-              className="w-full border border-gray-200 focus:border-[#C8102E] outline-none px-4 py-2.5 text-sm transition-colors"
+              className="w-full border border-gray-200 focus:border-[#F26926] outline-none px-4 py-2.5 text-sm transition-colors"
             />
           </div>
         </div>
@@ -100,7 +100,7 @@ export default function Settings() {
             value={settings.description}
             onChange={(e) => update('description', e.target.value)}
             rows={3}
-            className="w-full border border-gray-200 focus:border-[#C8102E] outline-none px-4 py-2.5 text-sm transition-colors resize-none"
+            className="w-full border border-gray-200 focus:border-[#F26926] outline-none px-4 py-2.5 text-sm transition-colors resize-none"
           />
         </div>
 
@@ -110,7 +110,7 @@ export default function Settings() {
             type="tel"
             value={settings.contactPhone}
             onChange={(e) => update('contactPhone', e.target.value)}
-            className="w-full border border-gray-200 focus:border-[#C8102E] outline-none px-4 py-2.5 text-sm transition-colors"
+            className="w-full border border-gray-200 focus:border-[#F26926] outline-none px-4 py-2.5 text-sm transition-colors"
           />
         </div>
       </div>
@@ -133,7 +133,7 @@ export default function Settings() {
                   type="url"
                   value={settings[key as keyof typeof settings]}
                   onChange={(e) => update(key as keyof typeof settings, e.target.value)}
-                  className="w-full border border-gray-200 focus:border-[#C8102E] outline-none pl-9 pr-4 py-2.5 text-sm transition-colors"
+                  className="w-full border border-gray-200 focus:border-[#F26926] outline-none pl-9 pr-4 py-2.5 text-sm transition-colors"
                 />
               </div>
             </div>
@@ -151,7 +151,7 @@ export default function Settings() {
               type="text"
               value={settings.adminName}
               onChange={(e) => update('adminName', e.target.value)}
-              className="w-full border border-gray-200 focus:border-[#C8102E] outline-none px-4 py-2.5 text-sm transition-colors"
+              className="w-full border border-gray-200 focus:border-[#F26926] outline-none px-4 py-2.5 text-sm transition-colors"
             />
           </div>
           <div>
@@ -160,7 +160,7 @@ export default function Settings() {
               type="email"
               value={settings.adminEmail}
               onChange={(e) => update('adminEmail', e.target.value)}
-              className="w-full border border-gray-200 focus:border-[#C8102E] outline-none px-4 py-2.5 text-sm transition-colors"
+              className="w-full border border-gray-200 focus:border-[#F26926] outline-none px-4 py-2.5 text-sm transition-colors"
             />
           </div>
           <div>
@@ -169,7 +169,7 @@ export default function Settings() {
               type="text"
               value={settings.adminTitle}
               onChange={(e) => update('adminTitle', e.target.value)}
-              className="w-full border border-gray-200 focus:border-[#C8102E] outline-none px-4 py-2.5 text-sm transition-colors"
+              className="w-full border border-gray-200 focus:border-[#F26926] outline-none px-4 py-2.5 text-sm transition-colors"
             />
           </div>
         </div>

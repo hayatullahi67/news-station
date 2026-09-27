@@ -59,7 +59,7 @@ export default function AdminSidebar() {
           <img src={croozLogo} alt="Crooz 106.3 FM" className={`${collapsed ? 'w-11 h-11' : 'w-16 h-11'} object-contain`} />
         </div>
         {!collapsed && (
-          <span className="text-[9px] font-bold tracking-[0.2em] text-[#C8102E] uppercase leading-none block">Admin Portal</span>
+          <span className="text-[9px] font-bold tracking-[0.2em] text-[#F26926] uppercase leading-none block">Admin Portal</span>
         )}
       </div>
 
@@ -67,7 +67,7 @@ export default function AdminSidebar() {
       {!collapsed && (
         <div className="px-4 py-4 border-b border-white/10">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full bg-[#C8102E] flex items-center justify-center flex-shrink-0">
+            <div className="w-10 h-10 rounded-full bg-[#F26926] flex items-center justify-center flex-shrink-0">
               <User size={18} />
             </div>
             <div className="flex-1 min-w-0">
@@ -76,7 +76,7 @@ export default function AdminSidebar() {
             </div>
             <button className="relative text-gray-400 hover:text-white transition-colors">
               <Bell size={16} />
-              <span className="absolute -top-1 -right-1 w-3.5 h-3.5 bg-[#C8102E] rounded-full text-[8px] flex items-center justify-center font-bold">3</span>
+              <span className="absolute -top-1 -right-1 w-3.5 h-3.5 bg-[#F26926] rounded-full text-[8px] flex items-center justify-center font-bold">3</span>
             </button>
           </div>
         </div>
@@ -96,7 +96,7 @@ export default function AdminSidebar() {
                 collapsed ? 'justify-center' : ''
               } ${
                 active
-                  ? 'bg-[#C8102E] text-white'
+                  ? 'bg-[#F26926] text-white'
                   : 'text-gray-400 hover:bg-white/10 hover:text-white'
               }`}
             >
@@ -117,7 +117,7 @@ export default function AdminSidebar() {
         </button>
         <button
           onClick={handleLogout}
-          className={`flex items-center gap-3 w-full px-4 py-3 text-gray-400 hover:text-[#C8102E] hover:bg-white/10 transition-colors ${collapsed ? 'justify-center' : ''}`}
+          className={`flex items-center gap-3 w-full px-4 py-3 text-gray-400 hover:text-[#F26926] hover:bg-white/10 transition-colors ${collapsed ? 'justify-center' : ''}`}
           title={collapsed ? 'Logout' : undefined}
         >
           <LogOut size={18} className="flex-shrink-0" />

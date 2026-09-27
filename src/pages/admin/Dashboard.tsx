@@ -37,7 +37,7 @@ export default function Dashboard() {
         </div>
         <Link
           to="/admin/create"
-          className="flex w-full justify-center sm:w-auto items-center gap-2 bg-[#C8102E] text-white text-xs font-bold uppercase tracking-widest px-4 py-2.5 hover:bg-[#A00D24] transition-colors"
+          className="flex w-full justify-center sm:w-auto items-center gap-2 bg-[#F26926] text-white text-xs font-bold uppercase tracking-widest px-4 py-2.5 hover:bg-[#D4561A] transition-colors"
         >
           <PlusCircle size={15} /> New Article
         </Link>
@@ -65,7 +65,7 @@ export default function Dashboard() {
         {/* Activity Chart */}
         <div className="lg:col-span-2 bg-white border border-gray-200 p-6">
           <div className="flex items-center gap-2 mb-6">
-            <BarChart3 size={16} className="text-[#C8102E]" />
+            <BarChart3 size={16} className="text-[#F26926]" />
             <h2 className="font-black text-xs uppercase tracking-widest text-[#171717]">Publishing Activity — This Week</h2>
           </div>
           <div className="flex items-end gap-3 h-40">
@@ -73,7 +73,7 @@ export default function Dashboard() {
               <div key={day} className="flex-1 flex flex-col items-center gap-2">
                 <span className="text-xs font-bold text-gray-600">{value}</span>
                 <div
-                  className="w-full bg-[#C8102E] transition-all duration-500 hover:bg-[#171717]"
+                  className="w-full bg-[#F26926] transition-all duration-500 hover:bg-[#171717]"
                   style={{ height: `${(value / maxActivity) * 100}%`, minHeight: '4px' }}
                 />
                 <span className="text-[10px] font-black uppercase tracking-widest text-gray-400">{day}</span>
@@ -85,7 +85,7 @@ export default function Dashboard() {
         {/* Most Viewed */}
         <div className="bg-white border border-gray-200 p-6">
           <div className="flex items-center gap-2 mb-5">
-            <Eye size={16} className="text-[#C8102E]" />
+            <Eye size={16} className="text-[#F26926]" />
             <h2 className="font-black text-xs uppercase tracking-widest text-[#171717]">Most Viewed</h2>
           </div>
           <div className="space-y-4">
@@ -110,7 +110,7 @@ export default function Dashboard() {
       <div className="bg-white border border-gray-200">
         <div className="flex items-center justify-between px-6 py-4 border-b border-gray-100">
           <h2 className="font-black text-xs uppercase tracking-widest text-[#171717]">Recent Articles</h2>
-          <Link to="/admin/manage" className="text-xs font-bold text-[#C8102E] hover:text-[#171717] uppercase tracking-widest transition-colors">
+          <Link to="/admin/manage" className="text-xs font-bold text-[#F26926] hover:text-[#171717] uppercase tracking-widest transition-colors">
             View All →
           </Link>
         </div>

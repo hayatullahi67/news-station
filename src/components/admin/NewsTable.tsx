@@ -54,7 +54,7 @@ export default function NewsTable({ articles, onDelete, onToggleStatus }: NewsTa
                       {article.title}
                     </p>
                     {article.isBreaking && (
-                      <span className="text-[10px] font-bold text-[#C8102E] uppercase tracking-wider">Breaking</span>
+                      <span className="text-[10px] font-bold text-[#F26926] uppercase tracking-wider">Breaking</span>
                     )}
                   </div>
                 </div>
@@ -140,7 +140,7 @@ export default function NewsTable({ articles, onDelete, onToggleStatus }: NewsTa
                         onClick={() => handleDelete(article.id)}
                         className={`w-full text-left px-4 py-2 text-xs font-semibold ${
                           deleteConfirm === article.id
-                            ? 'bg-red-50 text-[#C8102E]'
+                            ? 'bg-red-50 text-[#F26926]'
                             : 'hover:bg-gray-50 text-gray-700'
                         }`}
                       >

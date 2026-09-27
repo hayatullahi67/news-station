@@ -45,7 +45,7 @@ export default function AdminLogin() {
           <p className="text-sm text-gray-500 mb-7">Access the newsroom management system.</p>
 
           {error && (
-            <div className="flex items-center gap-2 bg-red-50 border border-red-200 text-[#C8102E] px-4 py-3 mb-5 text-sm font-semibold">
+            <div className="flex items-center gap-2 bg-red-50 border border-red-200 text-[#F26926] px-4 py-3 mb-5 text-sm font-semibold">
               <AlertCircle size={16} />
               {error}
             </div>
@@ -61,7 +61,7 @@ export default function AdminLogin() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter admin email"
-                className="w-full border-2 border-gray-200 focus:border-[#C8102E] outline-none px-4 py-3 text-sm transition-colors"
+                className="w-full border-2 border-gray-200 focus:border-[#F26926] outline-none px-4 py-3 text-sm transition-colors"
                 autoComplete="email"
               />
             </div>
@@ -76,7 +76,7 @@ export default function AdminLogin() {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="Enter your password"
-                  className="w-full border-2 border-gray-200 focus:border-[#C8102E] outline-none px-4 py-3 pr-12 text-sm transition-colors"
+                  className="w-full border-2 border-gray-200 focus:border-[#F26926] outline-none px-4 py-3 pr-12 text-sm transition-colors"
                   autoComplete="current-password"
                 />
                 <button
@@ -95,11 +95,11 @@ export default function AdminLogin() {
                   type="checkbox"
                   checked={rememberMe}
                   onChange={(e) => setRememberMe(e.target.checked)}
-                  className="w-4 h-4 accent-[#C8102E]"
+                  className="w-4 h-4 accent-[#F26926]"
                 />
                 <span className="text-sm text-gray-600">Remember me</span>
               </label>
-              <button type="button" className="text-sm text-[#C8102E] font-semibold hover:underline">
+              <button type="button" className="text-sm text-[#F26926] font-semibold hover:underline">
                 Forgot password?
               </button>
             </div>
@@ -107,7 +107,7 @@ export default function AdminLogin() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-[#C8102E] text-white font-black uppercase tracking-widest text-sm py-4 hover:bg-[#A00D24] disabled:opacity-60 disabled:cursor-not-allowed transition-colors flex items-center justify-center gap-2"
+              className="w-full bg-[#F26926] text-white font-black uppercase tracking-widest text-sm py-4 hover:bg-[#D4561A] disabled:opacity-60 disabled:cursor-not-allowed transition-colors flex items-center justify-center gap-2"
             >
               {loading ? (
                 <>
@@ -128,7 +128,7 @@ export default function AdminLogin() {
         </div>
 
         <div className="text-center mt-6">
-          <Link to="/" className="text-xs text-gray-500 hover:text-[#C8102E] transition-colors font-semibold">
+          <Link to="/" className="text-xs text-gray-500 hover:text-[#F26926] transition-colors font-semibold">
             ← Return to Public Site
           </Link>
         </div>

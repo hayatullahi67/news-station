@@ -60,13 +60,13 @@ export default function CreateNews() {
   } : undefined;
 
   if (loading) return <div className="p-6 text-sm text-gray-500">Loading article...</div>;
-  if (loadError) return <div className="p-6 text-sm font-semibold text-[#C8102E]">{loadError}</div>;
+  if (loadError) return <div className="p-6 text-sm font-semibold text-[#F26926]">{loadError}</div>;
   return (
     <div className="p-4 sm:p-6 space-y-5">
       <div className="flex items-start gap-3 sm:items-center sm:gap-4">
         <Link
           to="/admin/manage"
-          className="flex items-center gap-1 text-xs font-bold text-gray-500 hover:text-[#C8102E] transition-colors uppercase tracking-widest"
+          className="flex items-center gap-1 text-xs font-bold text-gray-500 hover:text-[#F26926] transition-colors uppercase tracking-widest"
         >
           <ChevronLeft size={14} /> Back
         </Link>

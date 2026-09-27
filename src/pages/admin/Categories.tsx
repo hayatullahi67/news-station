@@ -68,7 +68,7 @@ export default function Categories() {
         </div>
         <button
           onClick={openAdd}
-          className="flex w-full justify-center sm:w-auto items-center gap-2 bg-[#C8102E] text-white text-xs font-bold uppercase tracking-widest px-4 py-2.5 hover:bg-[#A00D24] transition-colors"
+          className="flex w-full justify-center sm:w-auto items-center gap-2 bg-[#F26926] text-white text-xs font-bold uppercase tracking-widest px-4 py-2.5 hover:bg-[#D4561A] transition-colors"
         >
           <Plus size={15} /> Add Category
         </button>
@@ -107,8 +107,8 @@ export default function Categories() {
                       onClick={() => handleDelete(cat.id)}
                       className={`p-1.5 transition-colors ${
                         deleteConfirm === cat.id
-                          ? 'text-[#C8102E] bg-red-50'
-                          : 'text-gray-500 hover:text-[#C8102E] hover:bg-red-50'
+                          ? 'text-[#F26926] bg-red-50'
+                          : 'text-gray-500 hover:text-[#F26926] hover:bg-red-50'
                       }`}
                       title={deleteConfirm === cat.id ? 'Click again to confirm' : 'Delete'}
                     >
@@ -147,13 +147,13 @@ export default function Categories() {
                   placeholder="e.g. Science & Health"
                   autoFocus
                   onKeyDown={(e) => e.key === 'Enter' && handleSave()}
-                  className="w-full border-2 border-gray-200 focus:border-[#C8102E] outline-none px-4 py-2.5 text-sm transition-colors"
+                  className="w-full border-2 border-gray-200 focus:border-[#F26926] outline-none px-4 py-2.5 text-sm transition-colors"
                 />
               </div>
               <div className="flex gap-3">
                 <button
                   onClick={handleSave}
-                  className="flex-1 flex items-center justify-center gap-2 bg-[#C8102E] text-white font-bold uppercase tracking-widest text-xs py-3 hover:bg-[#A00D24] transition-colors"
+                  className="flex-1 flex items-center justify-center gap-2 bg-[#F26926] text-white font-bold uppercase tracking-widest text-xs py-3 hover:bg-[#D4561A] transition-colors"
                 >
                   <Check size={14} /> {editId ? 'Save Changes' : 'Add Category'}
                 </button>

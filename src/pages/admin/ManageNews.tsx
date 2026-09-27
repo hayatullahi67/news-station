@@ -57,7 +57,7 @@ export default function ManageNews() {
         </div>
         <Link
           to="/admin/create"
-          className="flex w-full justify-center sm:w-auto items-center gap-2 bg-[#C8102E] text-white text-xs font-bold uppercase tracking-widest px-4 py-2.5 hover:bg-[#A00D24] transition-colors"
+          className="flex w-full justify-center sm:w-auto items-center gap-2 bg-[#F26926] text-white text-xs font-bold uppercase tracking-widest px-4 py-2.5 hover:bg-[#D4561A] transition-colors"
         >
           <PlusCircle size={15} /> Create Article
         </Link>
@@ -74,7 +74,7 @@ export default function ManageNews() {
               value={search}
               onChange={(e) => { setSearch(e.target.value); setPage(1); }}
               placeholder="Search articles by title..."
-              className="w-full border border-gray-200 pl-9 pr-4 py-2.5 text-sm focus:outline-none focus:border-[#C8102E]"
+              className="w-full border border-gray-200 pl-9 pr-4 py-2.5 text-sm focus:outline-none focus:border-[#F26926]"
             />
           </div>
 
@@ -128,7 +128,7 @@ export default function ManageNews() {
                   onClick={() => setPage(p)}
                   className={`w-8 h-8 text-xs font-bold border transition-colors ${
                     page === p
-                      ? 'bg-[#C8102E] text-white border-[#C8102E]'
+                      ? 'bg-[#F26926] text-white border-[#F26926]'
                       : 'border-gray-300 hover:border-[#171717]'
                   }`}
                 >

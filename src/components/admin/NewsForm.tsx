@@ -167,7 +167,7 @@ export default function NewsForm({ initialData, onSaveDraft, onPublish }: NewsFo
             value={form.title}
             onChange={(e) => update('title', e.target.value)}
             placeholder="Enter a compelling headline..."
-            className="w-full border-2 border-gray-200 focus:border-[#C8102E] outline-none px-4 py-3 font-display font-bold text-xl text-[#171717] transition-colors"
+            className="w-full border-2 border-gray-200 focus:border-[#F26926] outline-none px-4 py-3 font-display font-bold text-xl text-[#171717] transition-colors"
           />
         </div>
 
@@ -181,7 +181,7 @@ export default function NewsForm({ initialData, onSaveDraft, onPublish }: NewsFo
             onChange={(e) => update('summary', e.target.value)}
             placeholder="Write a brief summary of the article (2-3 sentences)..."
             rows={3}
-            className="w-full border-2 border-gray-200 focus:border-[#C8102E] outline-none px-4 py-3 text-sm text-gray-700 resize-none transition-colors"
+            className="w-full border-2 border-gray-200 focus:border-[#F26926] outline-none px-4 py-3 text-sm text-gray-700 resize-none transition-colors"
           />
         </div>
 
@@ -190,7 +190,7 @@ export default function NewsForm({ initialData, onSaveDraft, onPublish }: NewsFo
           <label className="block text-xs font-black uppercase tracking-widest text-[#171717] mb-2">
             Article Content *
           </label>
-          <div className="border-2 border-gray-200 focus-within:border-[#C8102E] transition-colors">
+          <div className="border-2 border-gray-200 focus-within:border-[#F26926] transition-colors">
             {/* Toolbar */}
             <div className="flex flex-wrap items-center gap-1 px-3 py-2 border-b border-gray-200 bg-gray-50">
               {[
@@ -233,7 +233,7 @@ export default function NewsForm({ initialData, onSaveDraft, onPublish }: NewsFo
               />
               <button
                 onClick={() => update('imagePreview', null)}
-                className="absolute top-3 right-3 bg-white text-[#171717] p-1.5 shadow hover:bg-red-50 hover:text-[#C8102E] transition-colors"
+                className="absolute top-3 right-3 bg-white text-[#171717] p-1.5 shadow hover:bg-red-50 hover:text-[#F26926] transition-colors"
               >
                 <X size={16} />
               </button>
@@ -245,7 +245,7 @@ export default function NewsForm({ initialData, onSaveDraft, onPublish }: NewsFo
               onDrop={handleDrop}
               onClick={() => fileInputRef.current?.click()}
               className={`border-2 border-dashed cursor-pointer flex flex-col items-center justify-center py-12 transition-colors ${
-                dragOver ? 'border-[#C8102E] bg-red-50' : 'border-gray-300 hover:border-[#C8102E] hover:bg-gray-50'
+                dragOver ? 'border-[#F26926] bg-red-50' : 'border-gray-300 hover:border-[#F26926] hover:bg-gray-50'
               }`}
             >
               <Upload size={28} className="text-gray-400 mb-3" />
@@ -278,7 +278,7 @@ export default function NewsForm({ initialData, onSaveDraft, onPublish }: NewsFo
               <select
                 value={form.status}
                 onChange={(e) => update('status', e.target.value as NewsStatus)}
-                className="w-full border border-gray-200 px-3 py-2 text-sm focus:outline-none focus:border-[#C8102E]"
+                className="w-full border border-gray-200 px-3 py-2 text-sm focus:outline-none focus:border-[#F26926]"
               >
                 <option value="draft">Draft</option>
                 <option value="published">Published</option>
@@ -291,7 +291,7 @@ export default function NewsForm({ initialData, onSaveDraft, onPublish }: NewsFo
                 type="date"
                 value={form.publishDate}
                 onChange={(e) => update('publishDate', e.target.value)}
-                className="w-full border border-gray-200 px-3 py-2 text-sm focus:outline-none focus:border-[#C8102E]"
+                className="w-full border border-gray-200 px-3 py-2 text-sm focus:outline-none focus:border-[#F26926]"
               />
             </div>
 
@@ -303,7 +303,7 @@ export default function NewsForm({ initialData, onSaveDraft, onPublish }: NewsFo
               <button
                 type="button"
                 onClick={() => update('isBreaking', !form.isBreaking)}
-                className={`w-11 h-6 rounded-full transition-colors relative ${form.isBreaking ? 'bg-[#C8102E]' : 'bg-gray-200'}`}
+                className={`w-11 h-6 rounded-full transition-colors relative ${form.isBreaking ? 'bg-[#F26926]' : 'bg-gray-200'}`}
               >
                 <span className={`absolute top-1 left-1 w-4 h-4 bg-white rounded-full transition-transform ${form.isBreaking ? 'translate-x-5' : ''}`} />
               </button>
@@ -317,7 +317,7 @@ export default function NewsForm({ initialData, onSaveDraft, onPublish }: NewsFo
               <button
                 type="button"
                 onClick={() => update('isFeatured', !form.isFeatured)}
-                className={`w-11 h-6 rounded-full transition-colors relative ${form.isFeatured ? 'bg-[#C8102E]' : 'bg-gray-200'}`}
+                className={`w-11 h-6 rounded-full transition-colors relative ${form.isFeatured ? 'bg-[#F26926]' : 'bg-gray-200'}`}
               >
                 <span className={`absolute top-1 left-1 w-4 h-4 bg-white rounded-full transition-transform ${form.isFeatured ? 'translate-x-5' : ''}`} />
               </button>
@@ -329,13 +329,13 @@ export default function NewsForm({ initialData, onSaveDraft, onPublish }: NewsFo
               {saved === 'published' ? '✓ Article published!' : '✓ Draft saved!'}
             </div>
           )}
-          {submitError && <p className="mt-3 text-xs font-semibold text-[#C8102E] leading-relaxed">{submitError}</p>}
+          {submitError && <p className="mt-3 text-xs font-semibold text-[#F26926] leading-relaxed">{submitError}</p>}
 
           <div className="mt-5 space-y-2">
             <button
               onClick={handlePublish}
               disabled={isSubmitting}
-              className="w-full bg-[#C8102E] text-white font-bold uppercase tracking-widest text-xs py-3 hover:bg-[#A00D24] disabled:opacity-60 transition-colors"
+              className="w-full bg-[#F26926] text-white font-bold uppercase tracking-widest text-xs py-3 hover:bg-[#D4561A] disabled:opacity-60 transition-colors"
             >
               {isSubmitting ? 'Saving...' : 'Publish Now'}
             </button>
@@ -358,7 +358,7 @@ export default function NewsForm({ initialData, onSaveDraft, onPublish }: NewsFo
             <select
               value={form.category}
               onChange={(e) => update('category', e.target.value as Category)}
-              className="w-full border border-gray-200 px-3 py-2 text-sm focus:outline-none focus:border-[#C8102E]"
+              className="w-full border border-gray-200 px-3 py-2 text-sm focus:outline-none focus:border-[#F26926]"
             >
               {savedCategories.map((cat) => (
                 <option key={cat.id} value={cat.name}>{cat.name}</option>
@@ -368,8 +368,8 @@ export default function NewsForm({ initialData, onSaveDraft, onPublish }: NewsFo
 
           <div>
             <label className="block text-xs font-bold text-gray-600 mb-1.5">Article Author *</label>
-            {savedAuthors.length > 0 && <select onChange={(e) => selectAuthor(e.target.value)} defaultValue="new" className="w-full border border-gray-200 px-3 py-2 text-sm focus:outline-none focus:border-[#C8102E] mb-3"><option value="new">+ Add a new author</option>{savedAuthors.map((author) => <option key={author.id} value={author.id}>{author.name}</option>)}</select>}
-            <input type="text" value={form.author} onChange={(e) => update('author', e.target.value)} placeholder="Author full name" className="w-full border border-gray-200 px-3 py-2 text-sm focus:outline-none focus:border-[#C8102E]" />
+            {savedAuthors.length > 0 && <select onChange={(e) => selectAuthor(e.target.value)} defaultValue="new" className="w-full border border-gray-200 px-3 py-2 text-sm focus:outline-none focus:border-[#F26926] mb-3"><option value="new">+ Add a new author</option>{savedAuthors.map((author) => <option key={author.id} value={author.id}>{author.name}</option>)}</select>}
+            <input type="text" value={form.author} onChange={(e) => update('author', e.target.value)} placeholder="Author full name" className="w-full border border-gray-200 px-3 py-2 text-sm focus:outline-none focus:border-[#F26926]" />
           </div>
 
           <div className="border-t border-gray-100 pt-4 space-y-3">
@@ -381,8 +381,8 @@ export default function NewsForm({ initialData, onSaveDraft, onPublish }: NewsFo
               <div className="min-w-0"><p className="text-xs font-semibold text-gray-700">Author photo</p><p className="text-[11px] text-gray-400">Upload a profile image</p></div>
               <input ref={authorImageRef} type="file" accept="image/*" className="hidden" onChange={(e) => { const file = e.target.files?.[0]; if (file) handleAuthorImage(file); }} />
             </div>
-            <input type="text" value={form.authorTitle} onChange={(e) => update('authorTitle', e.target.value)} placeholder="Role, e.g. News Reporter" className="w-full border border-gray-200 px-3 py-2 text-sm focus:outline-none focus:border-[#C8102E]" />
-            <textarea value={form.authorBio} onChange={(e) => update('authorBio', e.target.value)} placeholder="Short author bio (shown on the article page)" rows={4} className="w-full border border-gray-200 px-3 py-2 text-sm resize-none focus:outline-none focus:border-[#C8102E]" />
+            <input type="text" value={form.authorTitle} onChange={(e) => update('authorTitle', e.target.value)} placeholder="Role, e.g. News Reporter" className="w-full border border-gray-200 px-3 py-2 text-sm focus:outline-none focus:border-[#F26926]" />
+            <textarea value={form.authorBio} onChange={(e) => update('authorBio', e.target.value)} placeholder="Short author bio (shown on the article page)" rows={4} className="w-full border border-gray-200 px-3 py-2 text-sm resize-none focus:outline-none focus:border-[#F26926]" />
           </div>
         </div>
       </div>

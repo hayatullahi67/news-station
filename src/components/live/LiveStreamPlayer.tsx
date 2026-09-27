@@ -54,7 +54,7 @@ export default function LiveStreamPlayer({ streamUrl }: { streamUrl: string }) {
   if (!streamUrl) {
     return (
       <div className="bg-[#171717] text-white min-h-72 flex flex-col items-center justify-center p-8 text-center">
-        <Radio size={36} className="text-[#C8102E] mb-4" />
+        <Radio size={36} className="text-[#F26926] mb-4" />
         <h2 className="font-display font-black text-2xl">Live stream coming soon</h2>
         <p className="text-gray-300 text-sm mt-2 max-w-md">Crooz 106.3 FM is preparing its online broadcast. Please check back soon.</p>
       </div>
@@ -86,8 +86,8 @@ export default function LiveStreamPlayer({ streamUrl }: { streamUrl: string }) {
       <div className={`${isAudio ? 'min-h-72 flex items-center justify-center p-8' : ''}`}>
         {isAudio ? (
           <div className="w-full max-w-xl text-center text-white">
-            <Headphones size={42} className="mx-auto text-[#C8102E] mb-4" />
-            <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#C8102E] mb-2">Now broadcasting</p>
+            <Headphones size={42} className="mx-auto text-[#F26926] mb-4" />
+            <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#F26926] mb-2">Now broadcasting</p>
             <h2 className="font-display font-black text-2xl mb-6">Crooz 106.3 FM — Owerri</h2>
             <MediaTag key="audio" {...mediaProps} src={stream.type === 'hls' ? undefined : streamUrl} />
           </div>
@@ -96,10 +96,10 @@ export default function LiveStreamPlayer({ streamUrl }: { streamUrl: string }) {
         )}
       </div>
       <div className="flex items-center gap-2 px-5 py-3 text-sm text-white border-t border-white/10">
-        {isAudio ? <Headphones size={16} className="text-[#C8102E]" /> : <Video size={16} className="text-[#C8102E]" />}
+        {isAudio ? <Headphones size={16} className="text-[#F26926]" /> : <Video size={16} className="text-[#F26926]" />}
         <span>{isAudio ? 'Audio stream detected' : stream.type === 'hls' ? 'Live stream detected — media type will adjust automatically' : 'Video stream detected'}</span>
       </div>
-      {error && <div className="flex items-center gap-2 bg-red-50 text-[#A00D24] px-5 py-3 text-sm"><AlertCircle size={16} />{error}</div>}
+      {error && <div className="flex items-center gap-2 bg-red-50 text-[#D4561A] px-5 py-3 text-sm"><AlertCircle size={16} />{error}</div>}
     </div>
   );
 }

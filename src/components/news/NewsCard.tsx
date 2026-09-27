@@ -32,10 +32,10 @@ export default function NewsCard({ article, variant = 'default' }: NewsCardProps
           />
         </div>
         <div className="flex-1 min-w-0">
-          <span className="text-[10px] font-bold uppercase tracking-widest text-[#C8102E]">
+          <span className="text-[10px] font-bold uppercase tracking-widest text-[#F26926]">
             {article.category}
           </span>
-          <h3 className="font-display font-bold text-sm text-[#171717] leading-snug mt-0.5 group-hover:text-[#C8102E] transition-colors line-clamp-2">
+          <h3 className="font-display font-bold text-sm text-[#171717] leading-snug mt-0.5 group-hover:text-[#F26926] transition-colors line-clamp-2">
             {article.title}
           </h3>
           <p className="text-xs text-gray-500 mt-1">{formatDate(article.publishedAt)}</p>
@@ -47,10 +47,10 @@ export default function NewsCard({ article, variant = 'default' }: NewsCardProps
   if (variant === 'compact') {
     return (
       <Link to={`/news/${article.id}`} className="block group border-b border-gray-100 pb-4 last:border-0 last:pb-0">
-        <span className="text-[10px] font-bold uppercase tracking-widest text-[#C8102E]">
+        <span className="text-[10px] font-bold uppercase tracking-widest text-[#F26926]">
           {article.category}
         </span>
-        <h3 className="font-display font-bold text-sm text-[#171717] leading-snug mt-0.5 group-hover:text-[#C8102E] transition-colors line-clamp-2">
+        <h3 className="font-display font-bold text-sm text-[#171717] leading-snug mt-0.5 group-hover:text-[#F26926] transition-colors line-clamp-2">
           {article.title}
         </h3>
         <p className="text-xs text-gray-500 mt-1">{formatDate(article.publishedAt)}</p>
@@ -67,7 +67,7 @@ export default function NewsCard({ article, variant = 'default' }: NewsCardProps
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
         />
         {article.isBreaking && (
-          <span className="absolute top-3 left-3 bg-[#C8102E] text-white text-[10px] font-black uppercase tracking-widest px-2 py-1">
+          <span className="absolute top-3 left-3 bg-[#F26926] text-white text-[10px] font-black uppercase tracking-widest px-2 py-1">
             Breaking
           </span>
         )}
@@ -76,7 +76,7 @@ export default function NewsCard({ article, variant = 'default' }: NewsCardProps
         </span>
       </div>
       <div className="p-4">
-        <h3 className="font-display font-bold text-[#171717] leading-snug group-hover:text-[#C8102E] transition-colors line-clamp-2 text-base">
+        <h3 className="font-display font-bold text-[#171717] leading-snug group-hover:text-[#F26926] transition-colors line-clamp-2 text-base">
           {article.title}
         </h3>
         <p className="text-sm text-gray-500 mt-2 leading-relaxed line-clamp-2">{article.summary}</p>

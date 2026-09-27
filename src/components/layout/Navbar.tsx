@@ -80,7 +80,7 @@ export default function Navbar() {
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-8">
-            <Link to="/live" className="text-sm font-bold text-[#C8102E] hover:text-[#171717] transition-colors uppercase tracking-wide">
+            <Link to="/live" className="text-sm font-bold text-[#F26926] hover:text-[#171717] transition-colors uppercase tracking-wide">
               Listen Live
             </Link>
             {NAV_ITEMS.map((item) => (
@@ -88,7 +88,7 @@ export default function Navbar() {
                 key={item.label}
                 href={item.to}
                 onClick={(e) => handleNavClick(e, item)}
-                className="text-sm font-semibold text-[#171717] hover:text-[#C8102E] transition-colors uppercase tracking-wide cursor-pointer"
+                className="text-sm font-semibold text-[#171717] hover:text-[#F26926] transition-colors uppercase tracking-wide cursor-pointer"
               >
                 {item.label}
               </a>
@@ -105,7 +105,7 @@ export default function Navbar() {
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   placeholder="Search news..."
-                  className="border border-gray-300 rounded px-3 py-1.5 text-sm w-32 sm:w-48 focus:outline-none focus:border-[#C8102E]"
+                  className="border border-gray-300 rounded px-3 py-1.5 text-sm w-32 sm:w-48 focus:outline-none focus:border-[#F26926]"
                 />
                 <button
                   type="button"
@@ -119,7 +119,7 @@ export default function Navbar() {
               <button
                 onClick={() => setSearchOpen(true)}
                 aria-label="Open search"
-                className="text-[#171717] hover:text-[#C8102E] transition-colors p-1"
+                className="text-[#171717] hover:text-[#F26926] transition-colors p-1"
               >
                 <Search size={20} />
               </button>
@@ -140,7 +140,7 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {mobileOpen && (
         <div className="md:hidden border-t border-gray-200 bg-white px-4 py-4 space-y-3">
-          <Link to="/live" onClick={() => setMobileOpen(false)} className="block text-sm font-bold text-[#C8102E] uppercase tracking-wide py-1">
+          <Link to="/live" onClick={() => setMobileOpen(false)} className="block text-sm font-bold text-[#F26926] uppercase tracking-wide py-1">
             Listen Live
           </Link>
           {NAV_ITEMS.map((item) => (
@@ -148,7 +148,7 @@ export default function Navbar() {
               key={item.label}
               href={item.to}
               onClick={(e) => handleNavClick(e, item)}
-              className="block text-sm font-semibold text-[#171717] hover:text-[#C8102E] uppercase tracking-wide py-1 cursor-pointer"
+              className="block text-sm font-semibold text-[#171717] hover:text-[#F26926] uppercase tracking-wide py-1 cursor-pointer"
             >
               {item.label}
             </a>

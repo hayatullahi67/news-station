@@ -63,7 +63,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-bold uppercase tracking-widest text-xs text-[#C8102E] mb-4">Quick Links</h4>
+            <h4 className="font-bold uppercase tracking-widest text-xs text-[#F26926] mb-4">Quick Links</h4>
             <ul className="space-y-2">
               {[
                 { label: 'Home', targetId: 'home', to: '/' },
@@ -81,7 +81,7 @@ export default function Footer() {
 
           {/* Categories */}
           <div>
-            <h4 className="font-bold uppercase tracking-widest text-xs text-[#C8102E] mb-4">Categories</h4>
+            <h4 className="font-bold uppercase tracking-widest text-xs text-[#F26926] mb-4">Categories</h4>
             <ul className="space-y-2">
               {categories.map(({ id, name: cat }) => (
                 <li key={id}>
@@ -99,7 +99,7 @@ export default function Footer() {
 
           {/* Contact */}
           <div id="contact" className="scroll-mt-16">
-            <h4 className="font-bold uppercase tracking-widest text-xs text-[#C8102E] mb-4">Get In Touch</h4>
+            <h4 className="font-bold uppercase tracking-widest text-xs text-[#F26926] mb-4">Get In Touch</h4>
             <div className="space-y-2 text-sm text-gray-400 mb-6">
               <p>Owerri Ring Road, Toronto - Uratta</p>
               <p>Owerri North L.G.A, Owerri - Imo State</p>
@@ -113,7 +113,7 @@ export default function Footer() {
                 <a
                   key={i}
                   href="#"
-                  className="w-8 h-8 border border-gray-600 flex items-center justify-center hover:border-[#C8102E] hover:text-[#C8102E] transition-colors"
+                  className="w-8 h-8 border border-gray-600 flex items-center justify-center hover:border-[#F26926] hover:text-[#F26926] transition-colors"
                 >
                   <Icon size={14} />
                 </a>

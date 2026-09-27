@@ -71,7 +71,7 @@ export default function Home() {
       {searchQuery ? (
         <div className="max-w-7xl mx-auto px-4 py-8">
           <div className="flex items-center gap-3 mb-6">
-            <div className="w-1 h-6 bg-[#C8102E]" />
+            <div className="w-1 h-6 bg-[#F26926]" />
             <h2 className="font-display font-black text-2xl text-[#171717] uppercase tracking-wide">
               Search: "{searchQuery}"
             </h2>
@@ -87,7 +87,7 @@ export default function Home() {
             <div className="max-w-7xl mx-auto px-4">
               <div className="flex items-center mb-6">
                 <div className="flex items-center gap-3">
-                  <div className="w-1 h-6 bg-[#C8102E]" />
+                  <div className="w-1 h-6 bg-[#F26926]" />
                   <h2 className="font-display font-black text-2xl text-[#171717] uppercase tracking-wide">
                     Latest News
                   </h2>
@@ -105,7 +105,7 @@ export default function Home() {
                 <div className="text-center mt-8">
                   <button
                     onClick={() => setVisibleCount((c) => c + 3)}
-                    className="bg-[#171717] text-white font-bold uppercase tracking-widest text-xs px-8 py-3 hover:bg-[#C8102E] transition-colors"
+                    className="bg-[#171717] text-white font-bold uppercase tracking-widest text-xs px-8 py-3 hover:bg-[#F26926] transition-colors"
                   >
                     Load More Articles
                   </button>
@@ -121,15 +121,15 @@ export default function Home() {
                 {/* Trending List */}
                 <div className="lg:col-span-2">
                   <div className="flex items-center gap-3 mb-6">
-                    <div className="w-1 h-6 bg-[#C8102E]" />
+                    <div className="w-1 h-6 bg-[#F26926]" />
                     <h2 className="font-display font-black text-2xl text-[#171717] uppercase tracking-wide flex items-center gap-2">
-                      <TrendingUp size={20} className="text-[#C8102E]" /> Trending
+                      <TrendingUp size={20} className="text-[#F26926]" /> Trending
                     </h2>
                   </div>
                   <div className="space-y-4">
                     {trendingArticles.map((article, index) => (
                       <div key={article.id} className="flex gap-4 items-start group">
-                        <span className="font-display font-black text-4xl text-[#C8102E] leading-none flex-shrink-0 w-10 text-center">
+                        <span className="font-display font-black text-4xl text-[#F26926] leading-none flex-shrink-0 w-10 text-center">
                           {String(index + 1).padStart(2, '0')}
                         </span>
                         <NewsCard article={article} variant="compact" />
@@ -142,17 +142,17 @@ export default function Home() {
                 <div>
                   <div className="bg-[#171717] p-6 text-white">
                     <div className="flex items-center gap-2 mb-4">
-                      <Radio size={18} className="text-[#C8102E]" />
+                      <Radio size={18} className="text-[#F26926]" />
                       <h3 className="font-display font-black text-lg uppercase tracking-wide">News at a Glance</h3>
                     </div>
                     <p className="text-gray-300 text-sm leading-relaxed mb-5">A live snapshot of what is happening in the newsroom right now.</p>
                     <div className="space-y-3">
                       <div className="flex items-center justify-between border-t border-white/15 pt-3">
-                        <span className="flex items-center gap-2 text-sm text-gray-300"><Newspaper size={15} className="text-[#C8102E]" /> Published stories</span>
+                        <span className="flex items-center gap-2 text-sm text-gray-300"><Newspaper size={15} className="text-[#F26926]" /> Published stories</span>
                         <span className="font-display text-xl font-black text-white">{publishedArticles.length}</span>
                       </div>
                       <div className="flex items-center justify-between border-t border-white/15 pt-3">
-                        <span className="flex items-center gap-2 text-sm text-gray-300"><AlertCircle size={15} className="text-[#C8102E]" /> Breaking now</span>
+                        <span className="flex items-center gap-2 text-sm text-gray-300"><AlertCircle size={15} className="text-[#F26926]" /> Breaking now</span>
                         <span className="font-display text-xl font-black text-white">{publishedArticles.filter((article) => article.isBreaking).length}</span>
                       </div>
                     </div>

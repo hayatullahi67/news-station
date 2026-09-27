@@ -40,7 +40,7 @@ export default function NewsDetails() {
         <p className="text-gray-500 mb-8">The article you're looking for doesn't exist or has been removed.</p>
         <Link
           to="/"
-          className="bg-[#C8102E] text-white font-bold uppercase tracking-widest text-xs px-6 py-3 hover:bg-[#A00D24] transition-colors"
+          className="bg-[#F26926] text-white font-bold uppercase tracking-widest text-xs px-6 py-3 hover:bg-[#D4561A] transition-colors"
         >
           Back to Home
         </Link>
@@ -58,9 +58,9 @@ export default function NewsDetails() {
       <div className="border-b border-gray-200 bg-[#F5F5F5]">
         <div className="max-w-7xl mx-auto px-4 py-3">
           <div className="flex items-center gap-2 text-xs text-gray-500">
-            <Link to="/" className="hover:text-[#C8102E] transition-colors font-semibold">Home</Link>
+            <Link to="/" className="hover:text-[#F26926] transition-colors font-semibold">Home</Link>
             <ChevronRight size={12} />
-            <Link to="/" className="hover:text-[#C8102E] transition-colors font-semibold">{article.category}</Link>
+            <Link to="/" className="hover:text-[#F26926] transition-colors font-semibold">{article.category}</Link>
             <ChevronRight size={12} />
             <span className="text-gray-400 line-clamp-1">{article.title}</span>
           </div>
@@ -74,11 +74,11 @@ export default function NewsDetails() {
             {/* Category + Breaking */}
             <div className="flex items-center gap-3 mb-4">
               {article.isBreaking && (
-                <span className="bg-[#C8102E] text-white text-[10px] font-black uppercase tracking-widest px-2.5 py-1">
+                <span className="bg-[#F26926] text-white text-[10px] font-black uppercase tracking-widest px-2.5 py-1">
                   Breaking
                 </span>
               )}
-              <span className="border border-[#C8102E] text-[#C8102E] text-[10px] font-black uppercase tracking-widest px-2.5 py-1">
+              <span className="border border-[#F26926] text-[#F26926] text-[10px] font-black uppercase tracking-widest px-2.5 py-1">
                 {article.category}
               </span>
             </div>
@@ -89,7 +89,7 @@ export default function NewsDetails() {
             </h1>
 
             {/* Summary */}
-            <p className="text-lg text-gray-600 leading-relaxed border-l-4 border-[#C8102E] pl-4 mb-6 italic font-display">
+            <p className="text-lg text-gray-600 leading-relaxed border-l-4 border-[#F26926] pl-4 mb-6 italic font-display">
               {article.summary}
             </p>
 
@@ -99,7 +99,7 @@ export default function NewsDetails() {
                 <img
                   src={article.author.avatar}
                   alt={article.author.name}
-                  className="w-12 h-12 rounded-full object-cover border-2 border-[#C8102E]"
+                  className="w-12 h-12 rounded-full object-cover border-2 border-[#F26926]"
                 />
                 <div>
                   <p className="font-bold text-[#171717] text-sm">{article.author.name}</p>
@@ -144,7 +144,7 @@ export default function NewsDetails() {
                 {article.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="bg-gray-100 text-gray-700 text-xs font-semibold px-3 py-1 hover:bg-[#C8102E] hover:text-white transition-colors cursor-pointer"
+                    className="bg-gray-100 text-gray-700 text-xs font-semibold px-3 py-1 hover:bg-[#F26926] hover:text-white transition-colors cursor-pointer"
                   >
                     {tag}
                   </span>
@@ -171,7 +171,7 @@ export default function NewsDetails() {
                     <Icon size={15} />
                   </button>
                 ))}
-                <button className="ml-auto flex items-center gap-1.5 text-xs font-bold text-gray-500 hover:text-[#C8102E] transition-colors">
+                <button className="ml-auto flex items-center gap-1.5 text-xs font-bold text-gray-500 hover:text-[#F26926] transition-colors">
                   <Bookmark size={14} /> Save
                 </button>
               </div>
@@ -191,7 +191,7 @@ export default function NewsDetails() {
                 />
                 <div>
                   <p className="font-display font-bold text-[#171717]">{article.author.name}</p>
-                  <p className="text-xs text-[#C8102E] font-semibold">{article.author.title}</p>
+                  <p className="text-xs text-[#F26926] font-semibold">{article.author.title}</p>
                 </div>
               </div>
               <p className="text-sm text-gray-600 leading-relaxed">
@@ -202,7 +202,7 @@ export default function NewsDetails() {
             {/* Most Read */}
             <div>
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-1 h-5 bg-[#C8102E]" />
+                <div className="w-1 h-5 bg-[#F26926]" />
                 <h3 className="font-black text-xs uppercase tracking-widest text-[#171717]">Most Read</h3>
               </div>
               <div className="space-y-4">
@@ -213,7 +213,7 @@ export default function NewsDetails() {
                     </span>
                     <Link
                       to={`/news/${a.id}`}
-                      className="text-sm font-display font-bold text-[#171717] leading-snug hover:text-[#C8102E] transition-colors line-clamp-2"
+                      className="text-sm font-display font-bold text-[#171717] leading-snug hover:text-[#F26926] transition-colors line-clamp-2"
                     >
                       {a.title}
                     </Link>
@@ -228,7 +228,7 @@ export default function NewsDetails() {
         {related.length > 0 && (
           <div className="mt-14 pt-8 border-t-2 border-[#171717]">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-1 h-6 bg-[#C8102E]" />
+              <div className="w-1 h-6 bg-[#F26926]" />
               <h2 className="font-display font-black text-2xl text-[#171717] uppercase tracking-wide">
                 Related Stories
               </h2>
