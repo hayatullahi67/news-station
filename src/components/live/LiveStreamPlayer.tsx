@@ -1,8 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import Hls from 'hls.js';
 import { AlertCircle, Headphones, Pause, Play, Radio, Video } from 'lucide-react';
-
-const bgImage = '/images.jpg';
+import bgImage from '../../assets/images.jpg';
 
 type StreamType = 'audio' | 'video' | 'hls' | 'embed' | 'unknown';
 
@@ -71,11 +70,10 @@ export default function LiveStreamPlayer({ streamUrl }: { streamUrl: string }) {
         className="relative text-white min-h-72 flex flex-col items-center justify-center p-8 text-center overflow-hidden"
         style={{ backgroundImage: `url(${bgImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
       >
-        <div className="absolute inset-0 bg-black/60" />
         <div className="relative z-10">
           <Radio size={36} className="text-[#F26926] mb-4 mx-auto" />
-          <h2 className="font-display font-black text-2xl">Live stream coming soon</h2>
-          <p className="text-gray-300 text-sm mt-2 max-w-md">Crooz 106.3 FM is preparing its online broadcast. Please check back soon.</p>
+          <h2 className="font-display font-black text-2xl drop-shadow">Live stream coming soon</h2>
+          <p className="text-white/80 text-sm mt-2 max-w-md drop-shadow">Crooz 106.3 FM is preparing its online broadcast. Please check back soon.</p>
         </div>
       </div>
     );
@@ -107,15 +105,13 @@ export default function LiveStreamPlayer({ streamUrl }: { streamUrl: string }) {
     <div>
       {isAudio ? (
         <div
-          className="relative min-h-72 flex items-center justify-center p-8 overflow-hidden"
+          className="min-h-72 flex items-center justify-center p-8 overflow-hidden"
           style={{ backgroundImage: `url(${bgImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
         >
-          <div className="absolute inset-0 bg-black/55" />
-
-          <div className="relative z-10 w-full max-w-xl text-center text-white">
-            <Headphones size={42} className="mx-auto text-[#F26926] mb-4" />
-            <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#F26926] mb-2">Now broadcasting</p>
-            <h2 className="font-display font-black text-2xl mb-6">Crooz 106.3 FM — Owerri</h2>
+          <div className="w-full max-w-xl text-center text-white">
+            <Headphones size={42} className="mx-auto text-[#F26926] mb-4 drop-shadow" />
+            <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#F26926] mb-2 drop-shadow">Now broadcasting</p>
+            <h2 className="font-display font-black text-2xl mb-6 drop-shadow">Crooz 106.3 FM — Owerri</h2>
 
             {/* Compact player bar — play/pause only */}
             <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-5 py-3">
