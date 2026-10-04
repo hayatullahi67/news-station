@@ -16,7 +16,7 @@ function detectStream(url: string): StreamInfo {
   const youtube = normalized.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|live\/|embed\/))([\w-]{11})/i);
   if (youtube) return { type: 'embed', embedUrl: `https://www.youtube-nocookie.com/embed/${youtube[1]}?autoplay=1&rel=0` };
   if (/\.(m3u8)(?:[?#].*)?$/i.test(normalized)) return { type: 'hls' };
-  if (/streamguys/i.test(normalized)) return { type: 'audio' };
+  if (/streamguys|zeno\.fm/i.test(normalized)) return { type: 'audio' };
   if (/\.(mp3|aac|m4a|ogg|oga|opus|wav)(?:[?#].*)?$/i.test(normalized)) return { type: 'audio' };
   if (/\.(mp4|webm|ogv|mov)(?:[?#].*)?$/i.test(normalized)) return { type: 'video' };
   return { type: 'unknown' };

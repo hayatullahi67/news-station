@@ -1,5 +1,5 @@
 export const LIVE_STREAM_STORAGE_KEY = 'crooz-live-stream-url-v2';
-export const DEFAULT_LIVE_STREAM_URL = 'https://wazobiafmlagos951-atunwadigital.streamguys1.com/wazobiafmlagos951?utm_source=chatgpt.com';
+export const DEFAULT_LIVE_STREAM_URL = 'https://stream.zeno.fm/ptx4zh3sy7zuv';
 
 export function getLiveStreamUrl() {
   return localStorage.getItem(LIVE_STREAM_STORAGE_KEY)?.trim() || DEFAULT_LIVE_STREAM_URL;
