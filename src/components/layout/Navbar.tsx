@@ -37,18 +37,22 @@ export default function Navbar() {
   return (
     <header className="bg-white border-b-2 border-[#171717] sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-[72px] sm:h-20">
           {/* Logo */}
           <Link
             to="/"
             onClick={handleLogoClick}
-            className="flex items-center flex-shrink-0"
+            className="flex items-center gap-2 min-w-0"
           >
-            <img src={croozLogo} alt="Crooz 106.3 FM Owerri" className="h-14 w-28 object-contain object-center" />
+            <img src={croozLogo} alt="Crooz 106.3 FM Owerri" className="h-16 w-32 sm:h-[72px] sm:w-36 object-contain object-center flex-shrink-0" />
+            <span className={`${searchOpen ? 'hidden sm:flex' : 'flex'} flex-col leading-tight whitespace-nowrap`}>
+              <span className="text-sm sm:text-base font-black text-[#171717]">106.3 FM Owerri</span>
+              <span className="text-xs sm:text-sm font-semibold italic text-[#F26926]">... your story inspires.</span>
+            </span>
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-5 lg:gap-8">
             <Link to="/" className="text-sm font-bold text-[#F26926] hover:text-[#171717] transition-colors uppercase tracking-wide">
               Listen Live
             </Link>
